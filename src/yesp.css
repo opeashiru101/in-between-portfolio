@@ -1,0 +1,422 @@
+
+/* YES-P CASE STUDY */
+
+.yesp-page {
+  --paper: #f7f4ed;
+  --ink: #292b27;
+  --muted: #77776e;
+  --accent: #a45f45;
+  --line: #dedbd2;
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  font-family: inherit;
+}
+
+.yesp-page * {
+  box-sizing: border-box;
+}
+
+.yesp-nav,
+.yesp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 7%;
+  border-bottom: 1px solid var(--line);
+}
+
+.yesp-back,
+.yesp-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.yesp-back:hover,
+.yesp-contact:hover {
+  color: var(--accent);
+}
+
+.yesp-nav-label,
+.yesp-eyebrow,
+.yesp-section-label,
+.yesp-meta span,
+.yesp-scroll,
+.yesp-small-heading,
+.yesp-question span,
+.yesp-finding span,
+.yesp-stat-grid span {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.yesp-nav-label {
+  color: var(--muted);
+}
+
+.yesp-hero {
+  padding: 120px 12% 85px;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.yesp-eyebrow {
+  color: var(--accent);
+  margin-bottom: 28px;
+}
+
+.yesp-hero h1 {
+  max-width: 900px;
+  font-size: clamp(52px, 8vw, 108px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.yesp-intro {
+  max-width: 610px;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 32px 0 55px;
+}
+
+.yesp-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 25px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.yesp-meta span {
+  color: var(--muted);
+}
+
+.yesp-meta p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.yesp-scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;
+  width: fit-content;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.yesp-section {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 8%;
+  padding: 100px 12%;
+  border-top: 1px solid var(--line);
+}
+
+.yesp-section-label {
+  color: var(--accent);
+  padding-top: 9px;
+}
+
+.yesp-section-content {
+  max-width: 760px;
+}
+
+.yesp-section-content h2,
+.yesp-gallery-heading h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  margin: 0 0 28px;
+}
+
+.yesp-section-content > p,
+.yesp-gallery-heading > p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+  max-width: 670px;
+}
+
+.yesp-note {
+  border-left: 2px solid var(--accent);
+  padding: 12px 18px;
+  font-size: 13px !important;
+  margin-top: 30px;
+}
+
+.yesp-challenge {
+  background: #efebe2;
+}
+
+.yesp-small-heading {
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.yesp-question,
+.yesp-finding {
+  margin-top: 45px;
+  padding: 30px;
+  border: 1px solid var(--line);
+}
+
+.yesp-question span,
+.yesp-finding span {
+  color: var(--accent);
+}
+
+.yesp-question p {
+  font-size: 24px;
+  line-height: 1.4;
+  max-width: 580px;
+  margin-bottom: 0;
+}
+
+.yesp-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 55px;
+}
+
+.yesp-tech-grid > div {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.yesp-tech-grid span,
+.yesp-gallery-item figcaption > span {
+  color: var(--accent);
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.yesp-tech-grid h3,
+.yesp-gallery-item h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 18px 0 10px;
+}
+
+.yesp-tech-grid p,
+.yesp-gallery-item figcaption p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.yesp-gallery-section {
+  padding: 100px 12%;
+  border-top: 1px solid var(--line);
+  background: #efebe2;
+}
+
+.yesp-gallery-heading {
+  max-width: 700px;
+  margin: 45px 0 60px 33%;
+}
+
+.yesp-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 55px 30px;
+}
+
+.yesp-gallery-item {
+  margin: 0;
+  min-width: 0;
+}
+
+.yesp-image-wrap {
+  background: #e4e0d7;
+  padding: 18px;
+  overflow: hidden;
+}
+
+.yesp-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.yesp-gallery-item:hover img {
+  transform: scale(1.025);
+}
+
+.yesp-gallery-item figcaption {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  padding-top: 18px;
+}
+
+.yesp-gallery-item h3 {
+  margin: 0 0 8px;
+}
+
+.yesp-gallery-item figcaption p {
+  margin: 0;
+  max-width: 400px;
+}
+
+.yesp-evaluation {
+  background: #f7f4ed;
+}
+
+.yesp-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin: 50px 0;
+}
+
+.yesp-stat-grid > div {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.yesp-stat-grid strong {
+  display: block;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.yesp-stat-grid strong span {
+  font-family: inherit;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+.yesp-stat-grid div > span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.yesp-finding {
+  background: #efebe2;
+  border: none;
+}
+
+.yesp-finding h3 {
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 500;
+  margin: 20px 0 12px;
+}
+
+.yesp-finding p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.yesp-reflection {
+  background: #292b27;
+  color: #f7f4ed;
+}
+
+.yesp-reflection .yesp-section-label {
+  color: #d49a7e;
+}
+
+.yesp-reflection .yesp-section-content > p {
+  color: #c5c3bb;
+}
+
+.yesp-footer {
+  border-top: 1px solid var(--line);
+  border-bottom: none;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.yesp-footer a {
+  color: var(--ink);
+}
+
+@media (max-width: 800px) {
+  .yesp-hero {
+    padding: 85px 7% 65px;
+    min-height: auto;
+  }
+
+  .yesp-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .yesp-section {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 75px 7%;
+  }
+
+  .yesp-gallery-section {
+    padding: 75px 7%;
+  }
+
+  .yesp-gallery-heading {
+    margin: 35px 0 40px;
+  }
+
+  .yesp-tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .yesp-nav,
+  .yesp-footer {
+    padding: 20px 6%;
+  }
+
+  .yesp-nav-label {
+    display: none;
+  }
+
+  .yesp-hero h1 {
+    font-size: 54px;
+  }
+
+  .yesp-intro {
+    font-size: 16px;
+  }
+
+  .yesp-gallery {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .yesp-stat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .yesp-question,
+  .yesp-finding {
+    padding: 22px;
+  }
+
+  .yesp-question p {
+    font-size: 20px;
+  }
+}
